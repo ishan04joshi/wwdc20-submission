@@ -1,11 +1,3 @@
-//
-//  DashboardView.swift
-//  Emotions
-//
-//  Created by Witek Bobrowski on 10/05/2020.
-//  Copyright © 2020 Witek Bobrowski. All rights reserved.
-//
-
 import SwiftUI
 
 struct DashboardView: View  {
@@ -14,7 +6,6 @@ struct DashboardView: View  {
 
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
-            HeaderView(title: self.viewModel.title, showsCloseButton: false)
             Spacer()
             ExercisesView(viewModel: self.viewModel.exercises)
                 .frame(maxWidth: 800)

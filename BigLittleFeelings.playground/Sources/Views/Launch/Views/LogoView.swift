@@ -1,11 +1,3 @@
-//
-//  LogoView.swift
-//  Emotions
-//
-//  Created by Witek Bobrowski on 18/05/2020.
-//  Copyright © 2020 Witek Bobrowski. All rights reserved.
-//
-
 import SwiftUI
 
 struct LogoView: View {

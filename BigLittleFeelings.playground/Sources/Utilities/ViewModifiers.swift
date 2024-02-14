@@ -1,11 +1,3 @@
-//
-//  ViewModifiers.swift
-//  Emotions
-//
-//  Created by Witek Bobrowski on 14/05/2020.
-//  Copyright © 2020 Witek Bobrowski. All rights reserved.
-//
-
 import SwiftUI
 
 extension View {

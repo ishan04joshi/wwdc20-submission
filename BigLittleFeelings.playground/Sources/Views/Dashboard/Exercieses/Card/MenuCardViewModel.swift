@@ -1,11 +1,3 @@
-//
-//  MenuCardViewModel.swift
-//  Emotions
-//
-//  Created by Witek Bobrowski on 10/05/2020.
-//  Copyright © 2020 Witek Bobrowski. All rights reserved.
-//
-
 import SwiftUI
 
 final class MenuCardViewModel {
@@ -17,13 +9,14 @@ final class MenuCardViewModel {
     var subtitle: String { exercise.shortDescription }
     
     var path: Router.ExercisePath {
-        switch exercise {
-        case .emotions: return .emotions()
-        case .drawing: return .drawing()
-        case .affirmations: return .affirmations()
-        case .gratitude: return .gratitude()
+        if exercise == .drawing {
+            return .drawing()
+        } else if exercise == .affirmations {
+            return .affirmations()
         }
+        return .affirmations()
     }
+
     
     init(exercise: Exercise = .emotions) {
         self.exercise = exercise

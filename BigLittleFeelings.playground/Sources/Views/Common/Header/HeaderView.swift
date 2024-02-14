@@ -1,11 +1,3 @@
-//
-//  HeaderView.swift
-//  Emotions
-//
-//  Created by Witek Bobrowski on 10/05/2020.
-//  Copyright © 2020 Witek Bobrowski. All rights reserved.
-//
-
 import SwiftUI
 
 struct HeaderView: View  {
@@ -19,7 +11,6 @@ struct HeaderView: View  {
     var body: some View {
         ZStack {
             HStack {
-                if router.current == .dashboard() { profile }
                 Spacer()
                 if router.current == .dashboard() { knowledge }
                 if showsCloseButton { close }
@@ -38,15 +29,6 @@ extension HeaderView {
             .foregroundColor(Style.Color.black)
             .kerning(0.5)
             .multilineTextAlignment(.center)
-    }
-    private var profile: some View {
-        Button(action: { self.router.current = .profile }) {
-            ZStack {
-                if store.user.avatar == nil { placeholder } else { avatar }
-            }
-                .clipShape(Circle())
-                .shadow(color: Style.Color.lightGray, radius: 4)
-        }
     }
     private var knowledge: some View {
         Button(action: { self.router.current = .knowledge }) {
